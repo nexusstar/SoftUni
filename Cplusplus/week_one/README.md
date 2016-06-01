@@ -14,11 +14,11 @@ sudo apt-get install lldb
 
 ```
 
-1. install lldb front end
+2. install lldb front end
 
 [lldb.nvim](https://github.com/critiqjo/lldb.nvim)
 
-1. Fix lldb brocken links
+3. Fix lldb brocken links
 
 ```
 cd /usr/lib/llvm-3.8/lib/python2.7/site-packages/lldb
@@ -31,14 +31,14 @@ sudo ln -s ../../../libLLVM-3.6.0.so.1 libLLVM-3.8.so.1
 export PYTHONPATH='/usr/lib/llvm-3.8/lib/python2.7/site-packages'
 ```
 
-1. Fix lldb-server error
+4. Fix lldb-server error
 
 ```
 sudo update-alternatives --install /usr/bin/lldb-server lldb-server /usr/bin/lldb-server-3.8 100
 
 ```
 
-1. Check if all is working
+5. Check if all is working
 
 ```
 python
@@ -46,9 +46,13 @@ python
 >>>
 >>> import lldb
 >>>
-```
 
-1. Check if Neovim has python
+```
+__if not__
+
+Check abouve steps again
+
+6. Check if Neovim has python
 
 ```
 
@@ -61,18 +65,18 @@ nvim
 
 ```
 
-If not
+__If not__
 
-``` 
+```
 pip install --upgrade neovim
 pip3 install --uprade neovim
 
-``` 
+```
 
 1. UpdateRemotePlugins
 
 ```
-nvm
+nvim
 :UpdateRemotePlugins
 
 ```
