@@ -1,5 +1,9 @@
 # Week one
 
+## Debug with LLDB
+
+For new debug session run `:LLsession new`
+
 ## Problem: debug c++ in neovim with LLDB
 
 Try to use [LLDB](http://lldb.llvm.org/)
@@ -8,7 +12,6 @@ Try to use [LLDB](http://lldb.llvm.org/)
 
 	```
 		sudo apt-get install lldb
-
 	```
 
 ### 2. install lldb front end for neovim
