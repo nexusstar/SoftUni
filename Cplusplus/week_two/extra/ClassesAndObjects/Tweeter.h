@@ -1,3 +1,4 @@
+#pragma once
 #include "Person.h"
 
 class Tweeter : public Person
