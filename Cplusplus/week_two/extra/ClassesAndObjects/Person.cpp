@@ -2,12 +2,18 @@
 
 #include "Person.h"
 
-Person::Person(std::string first, std::string last, int arbitrary) :
+using namespace std;
+
+Person::Person(string first, string last, int arbitrary) :
   firstname(first),lastname(last),arbitrarynumber(arbitrary)
 {
-  std::cout << "Constructing: " << firstname << ' ' << lastname << std::endl;
+  cout << "Constructing: " << GetName() << endl;
 }
 Person::~Person()
 {
-  std::cout << "Destructing: " << firstname << ' ' << lastname << std::endl;
+  cout << "Destructing: " << GetName() << endl;
+}
+string Person::GetName()
+{
+  return firstname + ' ' + lastname;
 }
