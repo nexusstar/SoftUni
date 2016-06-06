@@ -32,7 +32,7 @@ int main()
 
   if (myBankAccount.withdrow(100))
   {
-    cout << "Withdrow of 100 from account " << endl;
+    cout << "Withdraw of 100 from account " << endl;
   }
   else
   {
