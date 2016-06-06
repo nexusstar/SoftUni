@@ -14,6 +14,9 @@ class Person
     std::string GetName();
     int GetNumber(){return arbitrarynumber;};
     void SetNumber(int number){arbitrarynumber = number;};
+    bool operator<(Person& p);
+    bool operator<(int i);
 
 };
+bool operator<(int i, Person& p);
 #endif
