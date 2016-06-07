@@ -1,13 +1,22 @@
 #include <string>
+#ifndef _Person_H
+#define _Person_H
 
-using namespace std;
 class Person
 {
   private:
-    string firstName;
-    string lastName;
-    int arbitraryNumber;
+    std::string firstname;
+    std::string lastname;
+    int arbitrarynumber;
   public:
-    Person(string first, string last, int arbitrary);
+    Person(std::string first, std::string last, int arbitrary);
     ~Person();
+    std::string GetName();
+    int GetNumber(){return arbitrarynumber;};
+    void SetNumber(int number){arbitrarynumber = number;};
+    bool operator<(Person& p);
+    bool operator<(int i);
+
 };
+bool operator<(int i, Person& p);
+#endif
