@@ -16,12 +16,29 @@ class Size
 
 class Rect
 {
+  private:
+    double length;
+
   public:
     Origin origin;
     Size size;
+    //Property
+    double getLength();
+    void setLength(double newLength);
 
     double area();
 };
+
+double Rect::getLength(){
+  //do some calculation
+  return length;
+};
+
+void Rect::setLength(double newLength)
+{
+  //some callculations
+  length = newLength;
+}
 
 double Rect::area()
 {
@@ -38,5 +55,5 @@ int main(){
 
   cout << myRect.area() << endl;
 
-
+  return 0;
 }
