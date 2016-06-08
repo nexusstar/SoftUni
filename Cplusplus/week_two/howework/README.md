@@ -22,3 +22,16 @@ Based on that information make a program to print the names of the buildings wit
 - Least people per office
 
 _Note: Make three different objects for the three buildings and put them in an array called “businessPark”._
+
+### Class Description
+
+--Business Park
+  -- Building
+    - Name
+    - Floors
+      - Count
+      - Ocupation (restaurant / office)
+    - Offices
+    - Working seats capacity
+      - Ocupied (employees)
+      - Free
