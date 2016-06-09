@@ -16,7 +16,7 @@ int main()
   cout << "a is: " << a <<  " *pA is: " << *pA << endl;
   cout << "pb is: " << pB << " pa is: " << pA << endl;
 
-  // do a == *pA and *pB
+  // Does a == *pA and *pB
   assert(a == *pA);
   assert(*pA == *pB);
 
@@ -37,6 +37,23 @@ int main()
   cout << (*pNexus).GetName() << endl;
   cout << pNexus -> GetName() << endl;
 
-  return 0;
+  //Reference
+  //
+  int& rA = a;
+  rA = 5;
+  cout << "a is " << a << endl;
 
+  //Whenever we use a pointer it SHOULD be initialize
+  //
+  int* badPointer = nullptr; //works only on c++11
+  if(badPointer) //check if badPointer is other than Null
+  {
+    *badPointer = 3;
+    cout << *badPointer << endl;
+  }
+
+  //There are no such thing as null reference
+  /* int& badReference; */
+
+  return 0;
 }
