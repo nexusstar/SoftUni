@@ -54,3 +54,16 @@
   - Modifier on member function
     int GetName() const;
 *I state that this function does not change any of the member variable of this Class*
+
+## Const with Pointers
+
+* Pointer can be `const`
+    int* const cpX
+  -then you can not change it to point to something else
+
+* OR pointer can point to something that is `const`
+    const int* cpX
+  - then the pointer can't be used to change what it points to
+
+
+

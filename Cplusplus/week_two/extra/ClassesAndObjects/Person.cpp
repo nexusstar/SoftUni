@@ -13,22 +13,22 @@ Person::~Person()
 {
   cout << "Destructing: " << GetName() << endl;
 }
-string Person::GetName()
+string Person::GetName() const
 {
   return firstname + ' ' + lastname;
 }
-bool Person::operator<(Person& p)
+bool Person::operator<( const Person& p) const
 {
   return arbitrarynumber < p.arbitrarynumber;
 }
 
-bool Person::operator<(int i)
+bool Person::operator<(int i) const
 {
   return arbitrarynumber < i;
 }
 
-bool operator<(int i, Person& p)
+bool operator<(int i, const Person& p)
 {
-  return i < p.GetNumber();
+  return i < p.arbitrarynumber;
 }
 
