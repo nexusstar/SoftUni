@@ -16,5 +16,12 @@ int main()
   cout << b2.getName() << endl;
   cout << b3.getName() << endl;
 
+  //Put three building objects in array
+  Building businessPark[3] = {b1, b2, b3};
+
+  cout << businessPark[0].getEmployees() << endl;
+  cout << businessPark[1].getSeats() << endl;
+  cout << businessPark[2].getFloors() << endl;
+
   return 0;
 }
