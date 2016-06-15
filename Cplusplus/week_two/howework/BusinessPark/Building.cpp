@@ -1,13 +1,7 @@
 #include <iostream>
-
 #include "Building.h"
 
 using namespace std;
-
-void Building::name(string newName)
-{
-  _name = newName;
-}
 
 Building::Building(
     string newName,
@@ -29,7 +23,6 @@ Building::Building(
   cout << " | " << this -> getOffices() << " offices";
   cout << " | " << this -> getEmployees() << " employees";
   cout << " | " << this -> getSeats() << " free working seats" << endl;
-
 }
 
 Building::~Building()
