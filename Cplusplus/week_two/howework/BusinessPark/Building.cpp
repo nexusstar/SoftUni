@@ -6,14 +6,16 @@ using namespace std;
 Building::Building(
     string newName,
     int floorCount,
+    Level newSpecialLevel,
     int officeCount,
     int employeesCount,
     int seatCount
-    )
+    ) : specialLevel(1, "office")
 {
 
   name(newName);
   floors(floorCount);
+  specialLevel = newSpecialLevel;
   offices(officeCount);
   employees(employeesCount);
   freeSeats(seatCount);

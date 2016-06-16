@@ -6,20 +6,17 @@ class Building
   private:
     std::string _name;
     int _floors;
-    Level level;
     int _offices;
     int _employees;
     int _freeSeats;
 
   public:
+    Level specialLevel;
     void name(std::string newName) { _name = newName; };
     std::string getName(){ return _name; }
 
     void floors(int count){ _floors = count; }
     int getFloors(){ return _floors; }
-
-    Building(int newLevel, std::string newPurpose) : level(newLevel, newPurpose){};
-
 
     void offices(int count){ _offices = count; }
     int getOffices(){ return _offices; }
@@ -33,6 +30,7 @@ class Building
     Building(
         std::string newName,
         int floorCount,
+        Level newSpecialLevel,
         int officeCount,
         int employeesCount,
         int seatsCount

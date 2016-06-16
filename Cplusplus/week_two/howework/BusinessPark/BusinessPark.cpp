@@ -17,9 +17,15 @@ int max(int a, int b, int c)
 int main()
 {
 
-  Building b1("XYZ industries", 6, 127, 600, 196);
-  Building b2("Rapid development Crew", 8, 210, 822, 85);
-  Building b3("SoftUni", 11, 106, 200, 60);
+  Building b1("XYZ industries", 6, Level(-1, "office"), 127, 600, 196);
+  Building b2("Rapid development Crew", 8, Level(1, "restaurant"), 210, 822, 85);
+  Building b3("SoftUni", 11, Level(1, "office"), 106, 200, 60);
+
+  b1.specialLevel.level(10); //set level
+
+  cout << "Special level of: " << b1.getName();
+  cout << " is on " << b1.specialLevel.getLevel();
+  cout <<" with purpose " << b1.specialLevel.getPurpose() << endl;
 
   //Put three building objects in array
   Building businessPark[3] = {b1, b2, b3};
