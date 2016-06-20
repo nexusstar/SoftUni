@@ -21,6 +21,7 @@ class FacultyMember
     void setCourse( std::string newCourse ) { _currentCourse = newCourse; };
 
     void show(){
+      std::cout << "Showing facultyMember: ";
       std::cout << this -> name() << std::endl;
       std::cout << "with ID: " << this -> ID << std::endl;
     }

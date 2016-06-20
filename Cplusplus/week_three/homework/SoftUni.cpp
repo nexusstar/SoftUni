@@ -30,5 +30,14 @@ int main()
   cout << aTeacher.ID << endl;
   cout << aGuestTheacher.ID << endl;
 
+  //Build SoftUni
+  SoftUni aSoftUni;
+  aSoftUni.addStudent(aStudent);
+  /* aSoftUni.addTeacher(aTeacher); */
+  /* aSoftUni.addGuestTeacher(aGuestTheacher); */
+
+  cout << "Getting Student by ID ";
+  aSoftUni.getStudentByID(1);
+
   return 0;
 }
