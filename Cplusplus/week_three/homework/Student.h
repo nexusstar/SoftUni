@@ -13,4 +13,9 @@ class Student : public FacultyMember
     float averageMark(){ return _averageMark; }
     void setAverageMark(float newMark ){ _averageMark = newMark; }
 
+    void show(){
+      
+    }
+
 };
+

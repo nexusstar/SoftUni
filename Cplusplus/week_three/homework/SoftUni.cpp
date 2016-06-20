@@ -1,19 +1,34 @@
 //SoftUni.cpp main entry point of application
 //
 #include <iostream>
-#include "Student.h"
-#include "Teacher.h"
+#include "SoftUni.h"
 
 using namespace std;
 
 int main()
 {
+  //build a Student
   Student aStudent;
   aStudent.setName("Some Random Name");
-  aStudent.setCourse("C++ oop basic");
+  aStudent.setCourse("C++ OOP basic");
+
+  //build a Teacher
+  Teacher aTeacher;
+  aTeacher.setName("Bill Gates");
+  aTeacher.setDays(100);
+  aTeacher.setSalary(4500);
+
+  //build a GuestTeacher
+  GuestTeacher aGuestTheacher;
+  aGuestTheacher.setName("Mark Zuckenberg");
+  aGuestTheacher.setSalary(10000);
 
   cout << aStudent.name() << endl;
-
+  cout << aTeacher.Salary() << endl;
+  cout << aGuestTheacher.Salary() << endl;
+  cout << aStudent.ID << endl;
+  cout << aTeacher.ID << endl;
+  cout << aGuestTheacher.ID << endl;
 
   return 0;
 }

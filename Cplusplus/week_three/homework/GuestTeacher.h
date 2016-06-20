@@ -1,10 +1,10 @@
 #include "Teacher.h"
 
-class GuestTeacher : private Teacher
+class GuestTeacher : public Teacher
 {
   private:
     float _courseSalary;
   public:
-    float courseSalary(){ return _courseSalary; }
+    float Salary(){ return _courseSalary; }
     void setSalary( float newCourseSalary ){ _courseSalary = newCourseSalary; }
 };
