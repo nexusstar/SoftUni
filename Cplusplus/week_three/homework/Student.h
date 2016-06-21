@@ -13,9 +13,12 @@ class Student : public FacultyMember
     float averageMark(){ return _averageMark; }
     void setAverageMark(float newMark ){ _averageMark = newMark; }
 
-    void show(){
-      
+    void showMember(){
+      std::cout << "\nShowing student: ";
+
+      FacultyMember::showMember();
+
+      std::cout << "average mark: " << this -> averageMark() << std::endl;
+      std::cout << "Current Course: " << this -> currentCourse() << std::endl;
     }
-
 };
-

@@ -11,9 +11,9 @@ class SoftUni
     GuestTeacher* guestTeachers[USHRT_MAX];
 
   public:
-    void getStudentByID( short int UID ) { return students[UID] -> show(); };
-    void getTeacherByID( short int UID ) { return teachers[UID] -> show(); };
-    void getGuestTeacherById( short int UID ){ return guestTeachers[UID] -> show(); };
+    void getStudentByID( short int UID ) { return students[UID] -> showMember(); };
+    void getTeacherByID( short int UID ) { return teachers[UID] -> showMember(); };
+    void getGuestTeacherById( short int UID ){ return guestTeachers[UID] -> showMember(); };
 
     void addStudent( Student newStudent ){ students[newStudent.ID] = &newStudent; };
     void addTeacher( Teacher newTeacher ){ teachers[newTeacher.ID] = &newTeacher; };

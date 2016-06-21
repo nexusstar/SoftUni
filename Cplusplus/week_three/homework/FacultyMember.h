@@ -19,9 +19,7 @@ class FacultyMember
 
     std::string currentCourse(){ return _currentCourse; };
     void setCourse( std::string newCourse ) { _currentCourse = newCourse; };
-
-    void show(){
-      std::cout << "Showing facultyMember: ";
+    void showMember(){ //showing parent members
       std::cout << this -> name() << std::endl;
       std::cout << "with ID: " << this -> ID << std::endl;
     }

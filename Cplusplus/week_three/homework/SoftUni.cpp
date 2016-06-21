@@ -9,7 +9,7 @@ int main()
 {
   //build a Student
   Student aStudent;
-  aStudent.setName("Some Random Name");
+  aStudent.setName("NameName fjlda fjdlal");
   aStudent.setCourse("C++ OOP basic");
 
   //build a Teacher
@@ -33,10 +33,9 @@ int main()
   //Build SoftUni
   SoftUni aSoftUni;
   aSoftUni.addStudent(aStudent);
-  /* aSoftUni.addTeacher(aTeacher); */
+  aSoftUni.addTeacher(aTeacher);
   /* aSoftUni.addGuestTeacher(aGuestTheacher); */
 
-  cout << "Getting Student by ID ";
   aSoftUni.getStudentByID(1);
 
   return 0;
