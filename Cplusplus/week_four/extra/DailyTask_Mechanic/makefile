@@ -9,7 +9,7 @@ CC = g++
 CFLAGS = -c -g -Wall -std=c++11
 
 # Sources
-SOURCES = main.cpp Car.cpp Mechanic.cpp
+SOURCES = main.cpp car.cpp mechanic.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 
 # build target executable
@@ -17,17 +17,20 @@ TARGET = main
 
 all: main
 
-main: main.o Car.o Mechanic.o
-	$(CC) main.o Car.o Mechanic.o -o main
+main: main.o car.o mechanic.o man.o
+	$(CC) main.o man.o car.o mechanic.o -o main
 
 main.o: main.cpp
 	$(CC) $(CFLAGS) main.cpp
 
-Car.o: Car.cpp
-	$(CC) $(CFLAGS) Car.cpp
+car.o: car.cpp
+	$(CC) $(CFLAGS) car.cpp
 
-Mechanic.o: Mechanic.cpp
-	$(CC) $(CFLAGS) Mechanic.cpp
+mechanic.o: mechanic.cpp
+	$(CC) $(CFLAGS) mechanic.cpp
+
+man.o: man.cpp
+	$(CC) $(CFLAGS) man.cpp
 
 clean:
 	rm -f *o main

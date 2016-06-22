@@ -1,12 +1,16 @@
 #include <iostream>
-#include "Car.h"
-#include "Mechanic.h"
+#include "man.h"
+#include "mechanic.h"
 
 int main()
 {
-  Car ford = Car(true, 1000);
+  Car ford =  Car(1000);
+  Mechanic fordGuro;
+  Man goshoForda;
 
-  Mechanic goshoForda;
+  std::cout << fordGuro.carRepairPrice(ford) << std::endl;
+  fordGuro.repairCar(ford);
+  goshoForda.crashCar(ford);
 
   return 0;
 }
