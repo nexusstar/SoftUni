@@ -35,6 +35,7 @@ Another example:
     Bozo(const char * fname, const char * lname); // constructor prototype
 
 In this case, you can use it to initialize new objects as follows:
+
     Bozo bozetta = bozo("Bozetta", "Biggens"); // primary form
     Bozo fufu("Fufu", "O'Dweeb"); // short form
     Bozo *pc = new Bozo("Popo", "Le Peu"); // dynamic object
