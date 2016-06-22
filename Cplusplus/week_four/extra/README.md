@@ -64,3 +64,23 @@ Function promisess not to modify the invoking object.
     operator*() //overloads * operator
     operator+() //overloads + operator
     operator@() // NOT there is no C++ @ operator
+
+
+    A = B * 2.01
+
+Translates to the following member function call:
+
+    A = B.operator*(2.01);
+
+_Remember the left operand is the invoking object_
+
+    A = 2.01 * B; // cannot correnspod to a member function
+
+Compiler could match the expression to the following call
+
+    A = operator(2.01, B);
+
+This function would have this prototype:
+
+    Aclass operator*(double m, const Aclass& a);
+
