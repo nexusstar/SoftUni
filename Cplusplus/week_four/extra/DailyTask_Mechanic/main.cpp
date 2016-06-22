@@ -1,8 +1,12 @@
 #include <iostream>
+#include "Car.h"
 #include "Mechanic.h"
 
 int main()
 {
-  std::cout << "Hello World!" << std::endl;
+  Car ford = Car(true, 1000);
+
+  Mechanic goshoForda;
+
   return 0;
 }

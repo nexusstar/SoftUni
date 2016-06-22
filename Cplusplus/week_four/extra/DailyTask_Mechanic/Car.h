@@ -1,9 +1,17 @@
+#pragma once
+class Mechanic;
 class Car
 {
+  friend class Mechanic;
   private:
-    bool needsARepair;
     bool isEngineBroken;
-    friend void repairEngine(Car &aCar);
+    bool needsARepair;
   public:
-    float priceOfCar;
+    float price;
+    Car(bool engineStatus, float aPrice):
+      isEngineBroken(engineStatus),
+      needsARepair(engineStatus),
+      price(aPrice)
+  {};
 };
+

@@ -13,14 +13,21 @@ SOURCES = main.cpp Car.cpp Mechanic.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 
 # build target executable
-TARGET = main.exe
+TARGET = main
 
-all: $(SOURCES) $(TARGET)
+all: main
 
-$(TARGET) : $(OBJECTS)
-	$(CC) $(CFLAGS) $(OBJECTS) -O $@
+main: main.o Car.o Mechanic.o
+	$(CC) main.o Car.o Mechanic.o -o main
 
-.cpp.o:
-	$(CC) $(CFLAGS) $< -O $@
+main.o: main.cpp
+	$(CC) $(CFLAGS) main.cpp
 
+Car.o: Car.cpp
+	$(CC) $(CFLAGS) Car.cpp
 
+Mechanic.o: Mechanic.cpp
+	$(CC) $(CFLAGS) Mechanic.cpp
+
+clean:
+	rm -f *o main

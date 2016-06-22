@@ -2,6 +2,7 @@
 
 class Mechanic
 {
-  float priceForRepairingACar(Car &aCar);
-  void repairACar(Car &aCar);
+  public:
+    float priceForRepair(Car &aCar);
+    void repairCar(Car &aCar);
 };
