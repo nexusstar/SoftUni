@@ -93,3 +93,9 @@ simple functions.
 
 For example class for communication it must have functions
 for send, receive  and buffer.
+
+### Multiple inheritance
+
+When derived from multiple classes and have member overloading
+when initialize it needs to specify from which class is
+this member
