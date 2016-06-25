@@ -13,8 +13,10 @@ and the implementation (code for class methods) in a source file.
 
 Keywords _public_,  _private_ and _protected_
   _public_ - any program that uses an object of a particular class can access this members
+
   _private_ - any program can access this members only using public member functions *or using friend*
-  _protected_ - 
+
+  _protected_ -
 
 ### Constructors
 
@@ -84,3 +86,10 @@ This function would have this prototype:
 
     Aclass operator*(double m, const Aclass& a);
 
+### Protocols
+
+an abstract class that is inherited from multiple classes with 
+simple functions.
+
+For example class for communication it must have functions
+for send, receive  and buffer.
