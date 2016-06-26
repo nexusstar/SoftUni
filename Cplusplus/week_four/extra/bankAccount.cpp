@@ -34,6 +34,7 @@ class Women : private Person
     {
       this -> bankAccount.balance = aMan.bankAccount.balance;
       aMan.bankAccount.balance = 0;
+      return *this; //must return something 
     }
 
     void wasteMoney()
