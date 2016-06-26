@@ -54,7 +54,23 @@ void PaintWhale::whaleSizeOnSheet()
 
 double PaintWhale::scaleFactor()
 {
-
   return this -> PaintObject::size.x / this -> Whale::size.x;
 }
 
+int main()
+{
+  using std::cout;
+  using std::endl;
+
+  PaintWhale aPaintWhale;
+  aPaintWhale.Whale::size.x = 12;
+  aPaintWhale.Whale::size.y = 4;
+  aPaintWhale.PaintObject::sheetSize.x = 0.3;
+  aPaintWhale.PaintObject::sheetSize.y = 0.2;
+  aPaintWhale.whaleSizeOnSheet();
+  cout << aPaintWhale.scaleFactor() << endl;
+
+
+  return 0;
+
+}
