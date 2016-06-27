@@ -99,3 +99,31 @@ for send, receive  and buffer.
 When derived from multiple classes and have member overloading
 when initialize it needs to specify from which class is
 this member
+
+## Special Member functions
+
+C++ automaticaly provides the following member functions:
+
+* A default constructor if you define no constructor
+* A default destructor if you don't define one
+* A copy constructor if you don't define one
+* An assignment operator if you don't define one
+
+### Copy constructor
+
+A copy constructor is used to copy an object to a newly created object. That is, it's used during initialization.
+Including passing function arguments by value and not during ordinary assignment. A copy constructor of class
+has this protoype:
+    Class_name(const Class_name &);
+
+#### When it's used
+
+A copy constructor is invoked whenever a new object is created and initialized to an existing object of the same kind.
+
+    Class_name classFoo;
+    Class_name classBoo(classFoo);
+    Class_name classBoo = classFoo;
+    Class_name classBoo = Class_name(classFoo);
+    Class_name * pClass_name = new Class_name(class_Foo); //initialize an anonymus object to class_Foo and points to it
+
+_Copy constructor is used when a function passes an object by value or when a function return an object_
