@@ -11,8 +11,10 @@ class ItemSKU
     int len;             // lenght of sku string;
     static int num_skus; // number of sku objects dummy inventories count
   public:
-    ItemSKU(const char * sku); // constructor
-    ItemSKU();                 // default constructor
-    ~ItemSKU();                // destructor;
+    ItemSKU(const char * sku);     // constructor
+    ItemSKU(const ItemSKU & aSKU); // copy constructor
+    ItemSKU();                     // default constructor
+    ~ItemSKU();                    // destructor;
+    ItemSKU & operator=(const ItemSKU & sku);
 };
 #endif

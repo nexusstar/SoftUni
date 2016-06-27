@@ -127,3 +127,13 @@ A copy constructor is invoked whenever a new object is created and initialized t
     Class_name * pClass_name = new Class_name(class_Foo); //initialize an anonymus object to class_Foo and points to it
 
 _Copy constructor is used when a function passes an object by value or when a function return an object_
+
+#### What it does
+
+The default copy constructor performs member-to-member copy of the _nonstatic members_ (shawllow copy) 
+
+    Class_name classBoo = classFoo;
+    //equals
+    Class_name classBoo;
+    classBoo.memberOne = classFoo.memberOne;
+    classBoo.memberTwo = classFoo.memberTwo;
