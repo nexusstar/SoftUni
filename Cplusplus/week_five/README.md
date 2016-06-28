@@ -2,7 +2,7 @@
 
 _If there's a pointer at some point you must call `delete`_
 
-* What hapens if someone copies it?
+* What happens if someone copies it?
 * What happens if the local variable (the pointer) goes out of scope early?
 
 ## Rule of three
