@@ -6,7 +6,7 @@
 
 class ItemSKU
 {
-  private: 
+  private:
     char * str;          // pointer to sku string
     int len;             // lenght of sku string;
     static int num_skus; // number of sku objects dummy inventories count
@@ -16,5 +16,6 @@ class ItemSKU
     ItemSKU();                     // default constructor
     ~ItemSKU();                    // destructor;
     ItemSKU & operator=(const ItemSKU & sku);
+    std::string getSKU() { return str;}
 };
 #endif

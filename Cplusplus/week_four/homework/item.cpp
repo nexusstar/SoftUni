@@ -40,12 +40,12 @@ Item::Item(ItemSKU aSKU, std::string aName, float aValue)
 
 Item::Item(std::string aName, float aValue)
 {
-  setSKU(); //set sku to default
-  //using setters
+  setSKU(); //set sku to default value
   setName(aName);
   setValue(aValue);
 }
+
+// destructor
 Item::~Item()
 {
-
 }
