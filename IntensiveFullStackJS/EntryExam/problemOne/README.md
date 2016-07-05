@@ -35,8 +35,13 @@ The numbers of input lines is in range [1,100]
 Allowed time/memory: 100ms/16MB
 
 INPUT	OUTPUT
+
 Sofia   30.00 87.00	Max temperature Burgas 35.00
+
 Burgas  35.00 90.00	Min temperature Sofia 30.00
+
 Plovdiv 33.00 86.00	Max humidity Burgas 90.00
+
 Min     humidity Plovdiv 86.00
+
 Average temperature/humidity 32.67/87.67
