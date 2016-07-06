@@ -20,7 +20,6 @@
 
     WorkerBee.prototype = Object.create(Employee.prototype);
 
-
     var SalesPerson  = function(){
         WorkerBee.call(this);
         this.dept = "sales";
@@ -31,7 +30,7 @@
 
     var Engineer = function(){
         WorkerBee.call(this);
-        this.dept = "engineering";
+        this.department = "engineering";
         this.machine = "";
     };
 
