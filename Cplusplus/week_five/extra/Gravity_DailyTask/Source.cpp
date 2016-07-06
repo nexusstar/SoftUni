@@ -16,6 +16,8 @@ int main()
   PhisicsControl EarthPhisicsControl = PhisicsControl(Earth);
   PhisicsControl MoonPhisicsControl = PhisicsControl(Moon);
 
+  std::cout << EarthPhisicsControl.finalSpeedOfFallingObject(myObject, 30)<< std::endl;
+  std::cout << MoonPhisicsControl.finalSpeedOfFallingObject(myObject, 10) << std::endl;
 
 
   return 0;

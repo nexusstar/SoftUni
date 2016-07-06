@@ -9,13 +9,6 @@
 
 ### Setup Neomake to lint js files
 
-* first install [ JSCS ](http://jscs.info/)
+* install [ Neomake ](https://github.com/neovim/neovim/wiki/Installing-Neovim) adn [ ESLint ](https://github.com/eslint/eslint)
 
-```bash
-    npm install -g jscs
-```
-* (optional) generate .jscsrc for the project
 
-```bash
-    jscs --auto-configure ./
-```

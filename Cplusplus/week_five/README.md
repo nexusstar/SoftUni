@@ -45,3 +45,31 @@ _If there's a pointer at some point you must call `delete`_
   - slower but safer
 
 `_static_cast` can safe you from yourself and don't use () casting
+
+## Project Documentation
+
+* Consist of documentation and information
+
+  - both inside the source-code and outside
+
+* External documentation
+
+   - At a higher level than the code
+
+   - Problem definition, requirements, architecture, design, project plans,
+   test plans, etc.
+
+* Internal
+
+  - lower-level - explains a class, method or piece of code
+
+### Self-Documenting Check list
+
+* Methods
+  - does each method name describe exactly what the method does?
+  - does each method perform one well-defined task with minimal dependencies?
+
+* Data Names
+  - Are type names descriptive enough to help document data declaration?
+  - Are variable used for a single purpose? Is this purpose
+  well-defined?
