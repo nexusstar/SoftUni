@@ -46,10 +46,16 @@ a dame of memory allocation
 #### Smart pointers type
 
 * Unique
+  - Non copyable(use std::move). Institute the concept of ownership.
 
 * Shared
+  - Reference counted
+      Assignment, for example, would increase the count by one, and the
+      expiration of a pointer would decrease the count by one. Only when
+      the final pointer expires would `delete` be invoked.
 
 * Strong
 
 * Week
+  - let's you peak inside a shared_ptr without bumping the reference count
 
