@@ -59,3 +59,14 @@ a dame of memory allocation
 * Week
   - let's you peak inside a shared_ptr without bumping the reference count
 
+## List
+
+### Initialization
+
+```cpp
+    std::list<int>first;                               //empty list of ints
+    std::list<int>second(4,100);                       //four ints with value 100
+    std::list<int>third(second.begin(), second.end()); //iterating through second
+    std::list<int>fourth(third);                       //a copy of third
+```
+
