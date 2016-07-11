@@ -33,13 +33,11 @@ std::string Person::getName()
 
 int main ()
 {
-  Person Kate{"Kate","Gregory", 123};
-  Person Nexus{"Nexus","StarA", 124};
-  Person SomeA{"Nexus", "Star", 125};
+  Person Kate( "Kate","Gregory", 123 );
+  Person Nexus( "Nexus","StarA", 124 );
+  Person SomeA( "Nexus", "Star", 125 );
 
   std::map<int, Person> people;
-
-  /* people[Nexus.getNum()] = Nexus; */
 
   std::pair<int, Person> p (SomeA.getNum(), SomeA);
   people.insert(p);
