@@ -19,3 +19,14 @@ void printMenu()
   }
 }
 
+// int operation functions
+
+void print(int i)
+{
+  std::cout << i << " ";
+}
+
+bool odd(int i)
+{
+  return i%2;
+}

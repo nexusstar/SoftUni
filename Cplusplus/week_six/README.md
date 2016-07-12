@@ -69,4 +69,37 @@ a dame of memory allocation
     std::list<int>third(second.begin(), second.end()); //iterating through second
     std::list<int>fourth(third);                       //a copy of third
 ```
+* List is faster than vector for adding new elements
+
+* Slower than vector for accessing elements
+
+## Queue, dequeue
+
+push and pop from one or both ends, FIFO collections.
+
+* priority_queue
+
+## Set
+
+useful for mathematical operations like union or difference
+
+## Multimap
+
+Map that can have more than one value for a given key
+
+# Sorting and searching
+
+* Implement as functions that take a collection rather than as
+methods of the collection
+
+  - actually, iterators that give access to the collection
+
+* for_each
+
+* find_if
+
+* #include <algorithm>
+
+* Much nicer with lambdas
+
 
