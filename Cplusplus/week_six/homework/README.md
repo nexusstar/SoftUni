@@ -16,9 +16,10 @@ For the votes you must develop a terminal Cpp program that is collecting the fol
 
 * Living city/village
 
-* Ethnos 
+* Ethos
 
 * Vote
+
 _develop a class describing the voters_
 
 If the user enters “12344321” (special password for the vote collectors) at the main screen, the vote collector menu opens. The vote collectors menu should provide the following results:
@@ -39,9 +40,9 @@ All possible for age, living city/village, ethnos // example output
 
 // “Names to choose: Walder Frey, Cersei Lannister, Beric Dondarrion”
 
-Give specific result for an Age, Name, Ethnos, Gender or Living City/Village
+Give specific result for an Age, Name, Ethos, Gender or Living City/Village
 
-// for example result collectors enters “21” and the program returns 
+// for example result collectors enters “21” and the program returns
 
 // “21 y – 19000 Stay, 3000 Leave
 
