@@ -85,8 +85,18 @@ _`[]` in lambda is called the capture clause_
 
 * Empty [] - captures nothing, works only with function parameters
 
+* `[x, y]` - captures `x` and `y` by value from the scope where the lambda is called
+  - copies are made
+  - Lambda can be used when x and y have gone out of scope.
 
+* `[&x, &y]` - captures x and y by reference
+  - no copies, changes affect the originals
+  - dangling references may be an issue
 
+* `[=]` - copy "everything" by value
+  - everything in the body of the lambda
+* `[&]` - copy "everything" by reference
+* `mutable` - allows body to modify the parameters captured by value. And to call their non-const member functions.
 
 
 
