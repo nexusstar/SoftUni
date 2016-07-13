@@ -1,5 +1,5 @@
-#ifndef __VOTE_H_
-#define __VOTE_H_
+#ifndef __VOTE_H
+#define __VOTE_H
 enum Vote
 {
   Stay,

@@ -3,12 +3,14 @@
 #define __VOTER_H_
 #include <string>
 #include "Vote.h"
+#include "Gender.h"
 
 class Voter
 {
   private:
-    std::string _name;
     int _age;
+    std::string _name;
+    Gender _gender;
     std::string _living;
     std::string _ethos;
     Vote _vote;
@@ -17,9 +19,11 @@ class Voter
     std::string Name(){ return _name; }
     std::string Living(){ return _living; }
     Vote Opinion(){ return _vote; }
+    Gender Sex(){ return _gender; }
     Voter(
-        std::string vName,
         int vAge,
+        std::string vName,
+        Gender vSex,
         std::string vLiving,
         std::string vEthos,
         Vote vVote

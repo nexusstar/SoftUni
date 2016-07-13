@@ -2,9 +2,10 @@
 
 #include "Voter.h"
 
-Voter::Voter( std::string vName, int vAge, std::string vLiving, std::string vEthos, Vote vVote):
-  _name(vName)
-  , _age(vAge)
+Voter::Voter(  int vAge, std::string vName, Gender vSex, std::string vLiving, std::string vEthos, Vote vVote):
+  _age(vAge)
+  , _name(vName)
+  , _gender(vSex)
   , _living(vLiving)
   , _ethos(vEthos)
   , _vote(vVote)
