@@ -10,38 +10,38 @@ int main()
 {
   std::vector<Voter*> brexit;
 
-  //start program
-  printMenu();
-  int i;
+  int i = -1;
   std::string enteredPassword;
-  while(!(std::cin >> i) ||  i < 0 || i > 2 ) //0: exit 1: get data 2: vote
-  {
-    std::cout << "Bad input, please try again: ";
-    std::cin.clear();
-    std::cin.ignore(INT_MAX, '\n');
-  }
-  std::cin.ignore();
-  switch(i)
-  {
-    case 0:
-      std::cout << "Exiting ...";
-      break;
-    case 1: // Admin
-      std::cout << "Enter password: ";
-      std::getline(std::cin, enteredPassword);
-      if(correct_psw(enteredPassword))
-      {
-        std::cout << "/***** Collector logged *****/\n";
-        printAdminMenu();
-      }
-      break;
-    case 2: // Vote
-      for(int i = 0; i < 3; ++i)
-      {
-        brexit.push_back(referendum());
-      }
-      break;
-  }
+
+  //start program
+  do{ //0: exit; 1: get data; 2: vote
+    printMenu();
+    std::cin >> i;
+    switch(i)
+    {
+      case 0:
+        std::cout << "Exiting ...";
+        break;
+      case 1: // Admin
+        std::cout << "Enter password: ";
+        std::getline(std::cin, enteredPassword);
+        if(correct_psw(enteredPassword))
+        {
+          std::cout << "/***** Collector logged *****/\n";
+          do{
+            printAdminMenu();
+            collectorData(i, brexit);
+          } while (!(std::cin >> i) || i != 0 || i > 2 );
+        }
+        break;
+      case 2: // Vote
+        for(int i = 0; i < 3; ++i)
+        {
+          brexit.push_back(referendum());
+        }
+        break;
+    }
+  } while (!(std::cin >> i) || i < 0 || i > 2);
 
   return 0;
 }
