@@ -4,6 +4,7 @@
 #include <string>
 #include "Utils.h"
 #include "Menu.h"
+#include "Collector.h"
 #include "Voter.h"
 
 
@@ -43,7 +44,9 @@ int main()
                 adminRunning = false;
                 break;
               case 2:
-                std::cout << "/----By age----/";
+                std::cout << "/----By age----/\n";
+                TotalVotersData(brexit);
+                std::cout << "Enter Age: ";
                 break;
               case 3:
                 std::cout << "/----By name---/";

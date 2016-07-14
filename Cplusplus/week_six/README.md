@@ -81,6 +81,11 @@ push and pop from one or both ends, FIFO collections.
 
 ## Set
 
+Sets are containers that store _unique elements following a specific order_
+The value of the element can not be modified once in container.
+
+The elements in a set are always sorted following specific _week ordering_ criterion
+
 useful for mathematical operations like union or difference
 
 ## Multimap
