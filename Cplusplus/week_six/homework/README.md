@@ -30,9 +30,9 @@ If the user enters “12344321” (special password for the vote collectors) at 
 
 * Results based on Age // example output “18 y – 12 000 Stay, 8000 Leave”
 
-* Results based on name // example output “Name Fiki – 8 Stay, 9 Leave”
+* Results based on Name // example output “Name Fiki – 8 Stay, 9 Leave”
 
-* Results based on Ethnos
+* Results based on Ethos
 
 * Results based on Living city/village
 
@@ -48,12 +48,12 @@ Give specific result for an Age, Name, Ethos, Gender or Living City/Village
 
 Notes:
 
-Use smart pointers wherever you want to.
+  Use smart pointers wherever you want to.
 
-Use Set for collecting names, age etc.
+  Use Set for collecting names, age etc.
 
-Use Map for collecting and holding the results for name, age, gender, etc.
+  Use Map for collecting and holding the results for name, age, gender, etc.
 
-Make the calculation about the current results when the result collector enters his password.
+  Make the calculation about the current results when the result collector enters his password.
 
-Use linked list, array, vector, whatever you decide in order to keep the different votes.
+  Use linked list, array, vector, whatever you decide in order to keep the different votes.
