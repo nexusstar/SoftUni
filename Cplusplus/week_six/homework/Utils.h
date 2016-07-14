@@ -93,37 +93,7 @@ Voter* referendum()
   return new Voter( age, name, userSex, living, ethos, userVote);
 }
 
-const int MENUITEMS = 3;
 
-std::string menu[MENUITEMS] =
-{
-  "0. Exit",
-  "1. Get data for voters",
-  "2. Enter vote data"
-};
-
-std::string adminMenu[MENUITEMS] =
-{
-  "0. Exit",
-  "1. Results based on age.",
-  "2. Results based on name."
-};
-
-void printMenu()
-{
-  for(int i = 0; i < MENUITEMS; ++i)
-  {
-    std::cout << menu[i] << std::endl;
-  }
-}
-
-void printAdminMenu()
-{
-  for(int i = 0; i < MENUITEMS; ++i)
-  {
-    std::cout << adminMenu[i] << std::endl;
-  }
-}
 
 void collectorData(int i, std::vector<Voter*> voters ){
   int totalVoters;

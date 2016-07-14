@@ -3,6 +3,7 @@
 #include <climits>
 #include <string>
 #include "Utils.h"
+#include "Menu.h"
 #include "Voter.h"
 
 
@@ -10,38 +11,60 @@ int main()
 {
   std::vector<Voter*> brexit;
 
-  int i = -1;
+  int i;
   std::string enteredPassword;
+  bool running = true;
 
-  //start program
-  do{ //0: exit; 1: get data; 2: vote
-    printMenu();
-    std::cin >> i;
+  while(running)
+  {
+    DisplayMainMenu();
+    i = GetInput();
     switch(i)
     {
-      case 0:
-        std::cout << "Exiting ...";
+      case 1:
+        std::cout << "Sorry to see you leave..";
+        running = false;
         break;
-      case 1: // Admin
+      case 2:
         std::cout << "Enter password: ";
-        std::getline(std::cin, enteredPassword);
+        getline(std::cin, enteredPassword);
         if(correct_psw(enteredPassword))
         {
-          std::cout << "/***** Collector logged *****/\n";
-          do{
-            printAdminMenu();
-            collectorData(i, brexit);
-          } while (!(std::cin >> i) || i != 0 || i > 2 );
-        }
+          bool adminRunning = true;
+          std::cout << "+++Welcome collector+++\n";
+          while(adminRunning)
+          {
+            DisplayAdminMenu();
+            i = GetInput();
+            switch(i)
+            {
+              case 1:
+                std::cout << "Bay collector..\n";
+                adminRunning = false;
+                break;
+              case 2:
+                std::cout << "/----By age----/";
+                break;
+              case 3:
+                std::cout << "/----By name---/";
+                break;
+            }
+          } //.while admin menu
+        } //.if psw correct
+        std::cout << "Exit to main menu\n\n";
         break;
-      case 2: // Vote
-        for(int i = 0; i < 3; ++i)
-        {
+      case 3:
+        std::cout << "+++ Welcome voters +++\n";
+        std::cout << "Enter how many voters: ";
+        i = GetInput();
+        for(int v = 0; v < i; v++){
           brexit.push_back(referendum());
         }
         break;
+      default:
+        std::cout << "ERROR: This text should not appear";
     }
-  } while (!(std::cin >> i) || i < 0 || i > 2);
+  } //.while
 
   return 0;
 }
