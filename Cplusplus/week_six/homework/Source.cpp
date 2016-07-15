@@ -66,6 +66,7 @@ int main()
         break;
       default:
         std::cout << "ERROR: This text should not appear";
+        break;
     }
   } //.while
 

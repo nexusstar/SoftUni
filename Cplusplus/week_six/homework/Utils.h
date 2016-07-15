@@ -54,6 +54,7 @@ Voter* referendum()
       break;
     case 2:
       userSex = Gender::Other;
+      break;
     default:
       std::cout << "Something went wrong, your Sex will be counted as Other\n";
       userSex = Gender::Other;
