@@ -1,11 +1,44 @@
 # Multi threading & Multiprocessing
 
-## Multiprocessing
+Multithreading is an ability of a platform(Operating System, Virtual Machine etc.) or application to create a process that consists of multiple threads of execution (threads). A thread of execution is the smallest sequence of programming instructions that can be managed independently by a scheduler.
 
-## Multiprogramming
+In Multicore and Multiprocessor systems Multithreading means that diferent threads are executed at the same time on different cores or processors.
 
-## Thread management in windows
+For single core systems multithreading divides the time between the treads. The operating system in turns sends a certain number of instructions from each thread to the processors. Threads are not executed simultaneously. Operating System only simulates their simultaneous execution. This feature of the operating system is called multithreading.
 
+
+## How to create a thread
+
+1. Include `thread` header
+
+    #include <thread>
+
+2. Create object of thread class
+
+    thread aThred;
+
+3. Initialize the thread
+
+    thread aThread(threadFunc); // pass function to thread
+
+4. Join threads
+
+Threads joining is done by using `join())` member function of thread class
+This function returns only after all the threads are terminated. It means that the main thread will wait until child thread does not finish its execution.
+
+    aThread.join();
+
+### Joinable and not joinable threads
+
+After `join()` returns, thread becomes _not joinable_.
+
+A joinable thread is a thread that represents a thread of execution which has not yet been joined.
+
+Thread can be checked if is joinable with `joinable()`
+
+    bool joinable()
+
+Returns `true` if thread is joinable and `false` otherwise.
 
 # Lambda
 
