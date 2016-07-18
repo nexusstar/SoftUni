@@ -13,15 +13,15 @@ For single core systems multithreading divides the time between the treads. The 
 ```c++
     #include <thread>
 ```
-1. Create object of thread class
+2. Create object of thread class
 ```c++
     thread aThred;
 ```
-1. Initialize the thread
+3. Initialize the thread
 ```c++
     thread aThread(threadFunc); // pass function to thread
 ```
-1. Join threads
+4. Join threads
 
 Threads joining is done by using `join())` member function of thread class
 This function returns only after all the threads are terminated. It means that the main thread will wait until child thread does not finish its execution.
