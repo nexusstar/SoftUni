@@ -10,24 +10,24 @@ For single core systems multithreading divides the time between the treads. The 
 ## How to create a thread
 
 1. Include `thread` header
-
+```c++
     #include <thread>
-
+```
 2. Create object of thread class
-
+```c++
     thread aThred;
-
+```
 3. Initialize the thread
-
+```c++
     thread aThread(threadFunc); // pass function to thread
-
+```
 4. Join threads
 
 Threads joining is done by using `join())` member function of thread class
 This function returns only after all the threads are terminated. It means that the main thread will wait until child thread does not finish its execution.
-
+```c++
     aThread.join();
-
+```
 ### Joinable and not joinable threads
 
 After `join()` returns, thread becomes _not joinable_.
@@ -35,9 +35,9 @@ After `join()` returns, thread becomes _not joinable_.
 A joinable thread is a thread that represents a thread of execution which has not yet been joined.
 
 Thread can be checked if is joinable with `joinable()`
-
+```c++
     bool joinable()
-
+```
 Returns `true` if thread is joinable and `false` otherwise.
 
 # Lambda
