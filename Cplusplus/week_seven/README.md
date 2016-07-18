@@ -40,6 +40,86 @@ Thread can be checked if is joinable with `joinable()`
 ```
 Returns `true` if thread is joinable and `false` otherwise.
 
+```c++
+    //pass function to thread
+    thread aThred(thredFunc);
+
+    //check if thread is joinable
+    if (threadFunc.joinable())
+    {
+        //main is blocked until aThread is not finished
+        aThread.join();
+    }
+```
+
+### Detach thread
+
+Threads becomes not joinable after `detach()` member function is called
+
+```c++
+    void detach();
+```
+
+This function detaches thread from the parent thread. It allows parent and child
+threads to be executed independently from each other. After the call to `detach()`
+the threads are not synchronized in any way
+
+```c++
+    aThread.detach();
+    if(aThread.joinable())
+    {
+      //main is blocked until aThread() is not finished
+      aThread.join();
+    }
+    else
+    {
+        std::cout << "aThread is detached";
+    }
+```
+
+### Initializing thread with an object
+
+For initializing thread can be used function object (functor)
+or a member function of a class.
+
+#### Using functor
+
+_A functor is an object of a class that overloads `()` operator._
+
+If we want to initialize a thread with an object of a class, this class
+should overload `()` operator. It can be done like this:
+
+```c++
+
+    class myObject
+    {
+      public:
+        void operator()()
+        {
+          cout << "This is my functor";
+        }
+    };
+
+```
+
+Now we could initialize a thread by passing an object of the class `myObject`
+to the constructor of the thread
+
+```c++
+
+    myObject aObjectFunc;
+    thread aThread(aObjectFunc);
+    if(aThread.joinable());
+      aThread.join();
+
+```
+#### Using public member function
+
+In order to use public member function of a class, we need to specify
+_the indentifier of this function and pass an object of the class, which defines this member function_
+
+
+
 # Lambda
 
    An expression that represents doing something. When you write a lambda,
