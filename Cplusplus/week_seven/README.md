@@ -118,6 +118,50 @@ to the constructor of the thread
 In order to use public member function of a class, we need to specify
 _the indentifier of this function and pass an object of the class, which defines this member function_
 
+```c++
+    class myObjectClass
+    {
+    public:
+      void operator()()
+      {
+        cout << "This is need to make a functor";
+      }
+      void publicFunction()
+      {
+        cout << "public function of myFunctor class is called"; << endl;
+      }
+    };
+
+    int main()
+    {
+      myObjectClass aObject;
+      thread functorTest(&myObjectClass::publicFunction, aObject);
+      if (functorTest.joinable())
+        functorTest.join();
+    }
+```
+
+#### Passing arguments to thread
+
+Initialize with a function to which we can pass arguments
+
+```c++
+    
+    void printValues( int val, char* std, double dval)
+    {
+      cout << val << " " << str << " " dval << endl;
+    }
+
+    int main()
+    {
+      char* str ="Hello thread!";
+
+      thread paramThread(printValues, 5, str, 3.2);
+      if(paramThread.joinable())
+        paramThread.join();
+    }
+```
+
 
 
 # Lambda
