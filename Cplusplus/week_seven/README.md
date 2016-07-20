@@ -188,7 +188,7 @@ to add corresponding parameter list to the oveloading version of operator `()`_
     return 0;
   }
 ```
-#### Thread ID 
+#### Thread ID
 
 Every thread has it's unique identifier. Class thread has public member function that returns the ID of the thread.
 
@@ -303,6 +303,3 @@ _`[]` in lambda is called the capture clause_
   - everything in the body of the lambda
 * `[&]` - copy "everything" by reference
 * `mutable` - allows body to modify the parameters captured by value. And to call their non-const member functions.
-
-
-
