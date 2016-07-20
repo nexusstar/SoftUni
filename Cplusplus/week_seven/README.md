@@ -187,8 +187,32 @@ to add corresponding parameter list to the oveloading version of operator `()`_
 
     return 0;
   }
-
 ```
+#### Thread ID 
+
+Every thread has it's unique identifier. Class thread has public member function that returns the ID of the thread.
+
+```c++
+    id get_id();
+```
+
+_the returned type is of type id_
+
+#### this_thread Namespace
+
+_ `this_thred` namespace from thread header offer possibilities to work with current thread. _
+
+1. `id_get_id()` - return the id of current thread.
+
+2. template
+    `void sleep_until(const chrono::time_point <Clock, Duration>& abs_time)` -  blocks the current thread
+    until abs_time is not reached.
+
+3. template
+    `void sleep_for(const chrono::duration<Rep,Period>& rel_time);` - thread is blocked during time span
+    specified
+
+
 # Lambda
 
    An expression that represents doing something. When you write a lambda,
