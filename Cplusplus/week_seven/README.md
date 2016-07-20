@@ -146,7 +146,7 @@ _the indentifier of this function and pass an object of the class, which defines
 Initialize with a function to which we can pass arguments
 
 ```c++
-    
+
     void printValues( int val, char* std, double dval)
     {
       cout << val << " " << str << " " dval << endl;
@@ -161,9 +161,34 @@ Initialize with a function to which we can pass arguments
         paramThread.join();
     }
 ```
+_When you want to initialize a thread with an object with parameteres, we have
+to add corresponding parameter list to the oveloading version of operator `()`_
 
+```c++
+  class myObjectClass
+  {
+    public:
+      void operator()(int* arr, int length)
+      {
+        cout << "An array of length " << length << "is passed to thread" << endl;
+        for(int i = 0; i != length; ++i)
+          cout << arr[i] << " " endl;
+        cout << endl;
+      }
+  };
 
+  int main()
+  {
+    int arr[5] = { 1, 2, 3, 4, 5 };
+     myObjectClass aObject;
+     thread aThred(aObject, arr, 5);
+     if(aThread.joinable())
+      aTread.join();
 
+    return 0;
+  }
+
+```
 # Lambda
 
    An expression that represents doing something. When you write a lambda,
