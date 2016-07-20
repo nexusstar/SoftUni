@@ -1,3 +1,4 @@
+#include <ctime>
 #include <iostream>
 
 #define MAXN 10000
@@ -8,7 +9,7 @@ unsigned primes[MAXN], pN = 0;
 char isPrime( unsigned n )
 {
   unsigned i = 0;
-  while (i < pN && primes[i] * primes[i] <= n){
+while (i < pN && primes[i] * primes[i] <= n){
     if(n % primes[i] == 0)
       return 0;
     i++;
@@ -30,10 +31,13 @@ void findPrimes ( unsigned n )
   }
 }
 
-
 int main()
 {
+  std::clock_t    start;
+
+  start = std::clock();
   findPrimes(1000);
 
+  std::cout << "Time: " << (std::clock() - start) / (double)(CLOCKS_PER_SEC / 1000) << " ms" << std::endl;
   return 0;
 }
