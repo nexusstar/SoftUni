@@ -202,15 +202,20 @@ _the returned type is of type id_
 
 _ `this_thred` namespace from thread header offer possibilities to work with current thread. _
 
-1. `id_get_id()` - return the id of current thread.
+1. `id get_id()` - return the id of current thread.
 
 2. template
     `void sleep_until(const chrono::time_point <Clock, Duration>& abs_time)` -  blocks the current thread
     until abs_time is not reached.
 
 3. template
-    `void sleep_for(const chrono::duration<Rep,Period>& rel_time);` - thread is blocked during time span
-    specified
+    `void sleep_for(const chrono::duration<Rep,Period>& rel_time);` - thread is blocked during time span specified
+
+4. `void yield()` - current thread allows implementation to reschedule the execution of thread. It used
+to avoid blocking.
+
+#### Concurrent access to resources
+
 
 
 # Lambda

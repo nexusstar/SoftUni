@@ -33,5 +33,5 @@ threads could block each other.
 _It is the programmer job to ensure that a group of threads won't block
 trying to modify the same data_
 
-_Every thread has to have an initial function where the new thread of 
+_Every thread has to have an initial function where the new thread of
 execution begins_

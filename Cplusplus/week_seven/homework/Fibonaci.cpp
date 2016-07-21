@@ -3,9 +3,9 @@
 
 #define MAXN 10000
 
-unsigned long fib[MAXN] = {0};
+unsigned long long fib[MAXN] = {0};
 
-unsigned long findFib( unsigned n )
+unsigned long long findFib( unsigned n )
 {
   if ( 0 == fib[n] ){
     if (n < 2){
@@ -17,19 +17,19 @@ unsigned long findFib( unsigned n )
   return fib[n];
 }
 
-void printFib (unsigned long n)
+void printFib (unsigned long long n)
 {
   std::clock_t start;
   start = std::clock();
   for(unsigned i = 0; i != n; ++i){
-    std::cout << "Fibonaci " << i <<  ": " <<  findFib(i) << " ";
-    std::cout << (std::clock() - start) / (double)(CLOCKS_PER_SEC / 1000) <<" ms" << std::endl;
+    std::cout << "Fibonacci " << i <<  ": " <<  findFib(i) << " ";
+    std::cout << (std::clock() - start) / (double)(CLOCKS_PER_SEC / 1000) << " ms" << std::endl;
   }
 }
 
 int main()
 {
-  printFib(10);
+  printFib(100);
 
   return 0;
 }
