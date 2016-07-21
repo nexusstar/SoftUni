@@ -12,6 +12,8 @@ std::vector<std::string> messages;
 const unsigned n = 500;
 unsigned primes[MAXN], pN = 0;
 
+std::mutex m;
+
 char isPrime( unsigned n )
 {
   unsigned i = 0;
@@ -34,8 +36,10 @@ void findPrimes ( unsigned n )
     if ( isPrime(i)){
       primes[pN] = i;
       pN++;
+      m.lock();
       std::cout << "Primes: "<< i << " ";
       std::cout << (std::clock() - start) / (double)(CLOCKS_PER_SEC / 1000) <<" ms" << std::endl;
+      m.unlock();
     }
     i++;
   }
@@ -60,17 +64,17 @@ void printFib (unsigned long long n)
   start = std::clock();
 
   for(unsigned i = 0; i != n; ++i){
+    m.lock();
     std::cout << "Fibonacci " << i + 1 <<  ": " <<  findFib(i) << " ";
     std::cout << (std::clock() - start) / (double)(CLOCKS_PER_SEC / 1000) << " ms" << std::endl;
+    m.unlock();
   }
 }
 
 int main()
 {
-  std::thread findPrimesThread(findPrimes, 100);
+  std::thread findPrimesThread(findPrimes, 100), findFibonaciThread(printFib, 20);
   findPrimesThread.join();
-
-  std::thread findFibonaciThread(printFib, 20);
   findFibonaciThread.join();
 
   return 0;

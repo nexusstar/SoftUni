@@ -214,8 +214,56 @@ _ `this_thred` namespace from thread header offer possibilities to work with cur
 4. `void yield()` - current thread allows implementation to reschedule the execution of thread. It used
 to avoid blocking.
 
+
+#### Deadlock conditions
+
+* Mutual exclusion
+  - Only one thread may use a resource(variable) at a time.
+
+* Hold and wait
+  - A thread may hold allocated resources while awaiting assignment of others
+
+* No pre-emption
+  - No resource an be forcibly removed from a thread holding it.
+
+#### Dealing with a deadlock
+
+* Prevent deadlock
+  - Design a system in such a way that the possibilities of deadlock is excluded
+    - Indirect - prevent all three of the necessary conditions occurring at once
+    - Direct  - prevent circular wait
+
+* Avoid deadlock
+  - Make a decision and check if deadlock will occur.
+
+* Detect deadlock
+  - limit access to resource and impose restriction on process
+
 #### Concurrent access to resources
 
+  *Mutex*
+
+  - Only one process at a time is allowed to a critical section when there is
+  no other process using it
+```c++
+
+  #include<mutex>
+
+  std::mutex mtx;
+
+  mtx.lock();
+  /* ciritical resource*/
+  mtx.unlock();
+```
+  *Starvation*
+
+
+  This is the process when a process/thread is needing a resource
+  which is not available
+
+  *Spinlock*
+
+  When multiple processes are waiting to enter the critical resource
 
 
 # Lambda
