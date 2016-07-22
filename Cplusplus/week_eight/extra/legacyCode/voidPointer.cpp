@@ -19,6 +19,7 @@ struct Noise{
   std::string say,who;
 };
 
+
 int main()
 {
 
@@ -38,6 +39,7 @@ int main()
   UseSomething(&str);
   UseSomething(&(cat.say)); // see no exception
   UseSomething(&cat);
+
 
   return 0;
 }

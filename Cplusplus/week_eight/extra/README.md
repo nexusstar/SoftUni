@@ -68,5 +68,38 @@ Dereference when using
 
 _avoid using `void*` pointer_
 
+## C-style arrays
+
+_collection of all the same kind of elements_
+
+* Declare on the stack in local scope
+
+```c++
+    type name[elements];
+    int ints[5];
+```
+* Declare on the heap (free store)
+
+```c++
+    type* name = new type[size]; // memory leak here
+    delete[] name; // must be deleted manually
+
+    int* aInts =  new int[4];
+    aInts[0] = 1;
+    aInts[1] = 2;
+    *(aInts + 2) = 3; // two from the start
+    *(aInts + 3) = 4; // three from the start
+
+    delete[] aInts;
+```
+_ when declared on the heap the used memory must be freed after use _
+
+* Using pointer manipulation to access elements of an array
+
+```c++
+    *(anArray + 2) = value; // access 3th element and assign value to it
+```
+Use array as pointer and dereference it and access
+
 
 
