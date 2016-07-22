@@ -1,0 +1,28 @@
+#Exceptions
+
+_Errors and failures happen_
+
+## Expected errors
+
+Simplest way is to test for them
+
+##Exceptions
+
+Transfer flow of execution from the problem location to somewhere that can handle it.
+
+Deal with it as close to the source as it happens.
+
+```c++
+    try
+    {
+      //risky stuff
+    }
+    catch(out_of_range& e)
+    {
+      e.what();
+    }
+    catch(exception& e)
+    {
+      e.what();
+    }
+```
