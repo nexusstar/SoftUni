@@ -214,6 +214,18 @@ _ `this_thred` namespace from thread header offer possibilities to work with cur
 4. `void yield()` - current thread allows implementation to reschedule the execution of thread. It used
 to avoid blocking.
 
+#### Race condition
+
+In councurrency, a race condition is anything where the outcome depends on the relative ordering of execution
+of operations.
+
+Another way of dealing with race condition is to handle the updates to the data structure as a _transaction_
+just as updates to the database are done.
+The Required series of data modification and reads is stored in a transaction log and then committed in a single
+step. If the commit can't proceed because the data structure has been modified by another thread, the transaction
+is restarted.
+
+This is termed *software transaction memory* (STM) there is not direct support in C++ for STM.
 
 #### Deadlock conditions
 

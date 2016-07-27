@@ -2,13 +2,10 @@
 #include <iostream>
 #include <thread>
 #include <mutex>
-#include <vector>
 #include <string>
 
+
 #define MAXN 10000
-
-std::vector<std::string> messages;
-
 const unsigned n = 500;
 unsigned primes[MAXN], pN = 0;
 
@@ -30,6 +27,7 @@ void findPrimes ( unsigned n )
   unsigned i = 2;
   std::clock_t start;
   start = std::clock();
+  std::string msg;
 
   while ( i < n )
   {
