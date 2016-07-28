@@ -1,6 +1,6 @@
-# Object and Classess notes
+# Object and Classes notes
 
-A _class_ is a C++ vihicle for translating an abstraction to a user-defined type.
+A _class_ is a C++ vehicle for translating an abstraction to a user-defined type.
 It combines data representation and methods for manipulating that data.
 
   What is an interface?
@@ -57,7 +57,7 @@ If C++11 rules are in effect, you can use list initialization instead:
 
 ### `const` Member functions
 
-Function promisess not to modify the invoking object.
+Function promises not to modify the invoking object.
 
 
 ### Operator overloading
@@ -88,7 +88,7 @@ This function would have this prototype:
 
 ### Protocols
 
-an abstract class that is inherited from multiple classes with 
+An abstract class that is inherited from multiple classes with
 simple functions.
 
 For example class for communication it must have functions
@@ -105,15 +105,19 @@ this member
 C++ automaticaly provides the following member functions:
 
 * A default constructor if you define no constructor
+
 * A default destructor if you don't define one
+
 * A copy constructor if you don't define one
+
 * An assignment operator if you don't define one
 
 ### Copy constructor
 
 A copy constructor is used to copy an object to a newly created object. That is, it's used during initialization.
 Including passing function arguments by value and not during ordinary assignment. A copy constructor of class
-has this protoype:
+has this prototype:
+
     Class_name(const Class_name &);
 
 #### When it's used
@@ -130,7 +134,7 @@ _Copy constructor is used when a function passes an object by value or when a fu
 
 #### What it does
 
-The default copy constructor performs member-to-member copy of the _nonstatic members_ (shawllow copy) 
+The default copy constructor performs member-to-member copy of the _nonstatic members_ (shallow copy)
 
     Class_name classBoo = classFoo;
     //equals

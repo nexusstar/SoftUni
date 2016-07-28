@@ -10,7 +10,7 @@
 
 * Data goes in the stack
 
-* The memory is deallcated when the data goes out of scope.
+* The memory is deallocated when the data goes out of scope.
 
 * Good for short life variables
 
