@@ -18,11 +18,11 @@ for a class or a function. The compiler then generates a specific class or
 function when we later provide specific types as arguments.
 
 The C++ notation for introducing a type parameter T is the template<typename T> prefix,
- meaning "for all types T". 
+ meaning "for all types T".
 
  Custom vector implementation example:
 
- ```c++ 
+ ```c++
 
      template<typename T> class vector
      {
