@@ -65,3 +65,52 @@ Difference between OOP and _algorithm-oriented programming_
 * _Object-oriented programming_: supported by class hierarchies and virtual functions,
 relying on run-time resolution.
 
+
+## Function templates
+
+Function templates enable you to define a function in terms of some arbitrary type.
+
+```c++
+    template <typename AnyType>
+    void Swap(AnyType &a, AnyType &b)
+    {
+      Anytype temp;
+      temp = a;
+      a = b;
+      b = temp;
+    }
+```
+
+Older *C++98* implementation of above uses `class` instead of `typename`
+so this is equivalent
+
+```c++
+    template <class AnyType>
+    void Swap(AnyType &a, AnyType &b)
+    {
+      AnyType temp;
+      temp = a;
+      a = b;
+      b = temp;
+    }
+```
+
+### Overloading function templates
+
+Function templates overloads just as regular function as we
+need new algorithm for particular kind of arguments
+we need to specify new signature for the template.
+
+```c++
+    template <typename AnyType>
+    void Swap(AnyType *a, AnyType *b, int n)
+    {
+        AnyType temp;
+        for(int i = 0; i < n; i++)
+        {
+          temp = a[i];
+          a[i] = b[i];
+          b[i] = temp;
+        }
+    }
+```
