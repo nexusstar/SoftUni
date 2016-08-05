@@ -114,3 +114,34 @@ we need to specify new signature for the template.
         }
     }
 ```
+### Function specialization
+
+For a given function name, you can have a non template function, a template function, and an
+explicit specialization template function, along with overloaded version of all these.
+
+For example if we have following struct:
+
+```c++
+    struct job
+    {
+      char name[40];
+      double salary;
+      int floor;
+    };
+```
+Prototype for Swap() in all three forms:
+
+```c++
+    // non template function prototype
+    void Swap(job &, job &);
+
+    //template prototype
+    template <typename T>
+    void Swap(T &, T &);
+
+    // explicit specialization for the job type
+    template<> void Swap<job>(job &, job &);
+```
+The precedence is as follow:
+
+_non template version > explicit specialization > template_
