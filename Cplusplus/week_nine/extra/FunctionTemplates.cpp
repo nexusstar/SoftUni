@@ -9,6 +9,7 @@ void Swap( AnyType &a, AnyType& b )
   b = temp;
 }
 
+
 int main()
 {
 
@@ -43,9 +44,6 @@ int main()
 
   std::cout << "as: " << as;
   std::cout << " bs: " << bs << std::endl;
-
-
-
 
   return 0;
 }
