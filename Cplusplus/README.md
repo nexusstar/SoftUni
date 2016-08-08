@@ -37,6 +37,8 @@ Trainer: Martin Kuvandzhiev ([ starbuckbg ](https://github.com/starbuckbg))
   
   [c++ mltithreading](week_seven/extra/README.md)
 
+[Lambda](https://github.com/nexusstar/SoftUni/blob/master/Cplusplus/week_seven/README.md#lambda)
+
 [Exceptions](week_eight/README.md)
 
 [Understand legacy code](week_eight/extra/README.md)
