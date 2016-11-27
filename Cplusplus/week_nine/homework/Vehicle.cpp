@@ -77,3 +77,8 @@ void Vehicle::printVehicleInformation() const
     << "Date of first registration: " << this->_dateFirstRegistration.getDateToString() << std::endl
     << "Date of registration in country: " << this->_dateCurrentRegistration.getDateToString() << std::endl;
 }
+
+void Vehicle::somefunction() const
+{
+
+}

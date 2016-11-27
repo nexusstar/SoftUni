@@ -34,7 +34,7 @@ Trainer: Martin Kuvandzhiev ([ starbuckbg ](https://github.com/starbuckbg))
 [Memory management & optimization](week_six/README.md)
 
 [Multi threading & multiprocessing](week_seven/README.md)
-  
+
   [c++ mltithreading](week_seven/extra/README.md)
 
 [Lambda](https://github.com/nexusstar/SoftUni/blob/master/Cplusplus/week_seven/README.md#lambda)
